@@ -54,7 +54,7 @@ def main() -> None:
             break  # Exits loop after successful calculation
         except ValueError as e:
             # Handles invalid input (non-numeric values) and prints error message
-            print(f"Please enter a valid number. {str(e)}")
+            print(f"Please enter a valid number.")
 
 if __name__ == '__main__':
     # Executes the main function when the script is run directly
