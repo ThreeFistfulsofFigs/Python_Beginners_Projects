@@ -101,7 +101,7 @@ def get_api_rates() -> Dict[str, dict]:
     """
     # API CONFIGURATION
     # Use provided API URL with EUR as base currency
-    url = "https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_lBq7a1mZFPFxXhKHgzReAxo4kWUm6C3BRgrBwmQL&base_currency=EUR"
+    url = "insert your API key here"
 
     try:
         # API REQUEST
