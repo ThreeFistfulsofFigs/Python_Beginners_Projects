@@ -35,6 +35,9 @@ Purpose: Generates cryptographically secure passwords with strength evaluation.
 Features: Customizable length and character types, strength scoring.
 Tech: Python, secrets, string, re.
 How to Use: Run main.py to generate and view 10 passwords.
+.
+.
+.
 
 Getting Started
 Prerequisites
@@ -43,7 +46,7 @@ Python 3.x installed on your system.
 
 Installation
 
-Clone the repository:git clone https://github.com/yourusername/personal-projects.git
+Clone the repository:git clone https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects
 
 
 Navigate to the repository folder:cd personal-projects
@@ -63,7 +66,6 @@ Run each main.py file directly with Python to test the functionality.
 
 Contributing
 Feel free to fork this repository, enhance the projects, or add new ones! Please open an issue or submit a pull request with your changes. Follow the structure of existing projects (e.g., include a README.md).
-License
-[Add your preferred license here, e.g., MIT.]
+
 Contact
 For questions or suggestions, reach out via the repository issues page or gerrit.meurer952@dontsp.am.
