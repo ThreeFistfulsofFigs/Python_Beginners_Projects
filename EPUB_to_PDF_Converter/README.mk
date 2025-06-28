@@ -57,8 +57,3 @@ Notes
 The conversion process runs in a separate thread to keep the GUI responsive.
 A 60-second timeout is enforced to prevent hangs; adjust if needed by modifying the check_thread method.
 Temporary files are cleaned up automatically, but errors during cleanup are logged.
-
-License
-[Add your preferred license here, e.g., MIT, GPL, or a custom one.]
-Contributing
-[Optional: Add guidelines for contributions if you plan to open-source this.]
