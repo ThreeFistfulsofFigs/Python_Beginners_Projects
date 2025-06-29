@@ -1,7 +1,7 @@
 # Python Beginners Projects
 
 ## Overview
-This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, and text analysis.
+This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, and VPN kill switch configuration.
 
 ## Projects
 
@@ -92,6 +92,32 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `word_frequency_analyzer`
 - **Dependencies**: None (standard library)
 
+### 9. Text Analyzer
+- **Purpose**: Analyzes text files for detailed statistics, including character, word, sentence, and paragraph counts, as well as word frequency distributions, using an enhanced Tkinter GUI.
+- **Features**:
+  - GUI for file selection, text preview, and results display.
+  - Comprehensive text analysis with word frequency.
+  - Supports multiple file encodings (UTF-8, Latin-1, CP1252, ISO-8859-1).
+  - Text preview toggle (500-character preview or full text).
+  - Saves analysis results to `.txt` files.
+  - Responsive GUI with minimum window size of 800x600.
+- **Tech**: Python, `tkinter`, `collections`, `re`, `os`, `pathlib`, `typing`.
+- **How to Use**: Run `main.py`, select a `.txt` or `.md` file, click "Analyze" to view statistics, use "Show Full Text"/"Show Preview Only" to toggle preview, view detailed results, or save to a file.
+- **Directory**: `text_analyzer`
+- **Dependencies**: None (standard library)
+
+### 10. VPN Kill Switch Configuration Tool
+- **Purpose**: Configures a Windows kill switch to disable internet access when a VPN is inactive, ensuring secure network usage.
+- **Features**:
+  - GUI for configuring VPN processes, network interface, and monitoring intervals.
+  - Real-time monitoring of service, VPN, and network status.
+  - Automatically disables network if no VPN processes are detected.
+  - Logs events to `%USERPROFILE%\vpn_killswitch.log`.
+- **Tech**: Python, `tkinter`, `psutil`, `pywin32`.
+- **How to Use**: Run `main.py`, configure VPN processes (e.g., `surfshark.exe`) and network interface, start the kill switch service, and monitor status.
+- **Directory**: `vpn_killswitch`
+- **Dependencies**: `psutil>=5.8.0`, `pywin32>=306`
+
 ## Getting Started
 
 ### Prerequisites
@@ -103,6 +129,9 @@ This repository contains a collection of small, standalone Python projects desig
 - **Dependencies**:
   - Currency Converter: `requests>=2.25.0`
   - EPUB to PDF Converter: `ebooklib>=0.17.1`, `beautifulsoup4>=4.9.0`, `pdfkit>=0.7.0`
+  - Word Frequency Analyzer: None (standard library)
+  - Text Analyzer: None (standard library)
+  - VPN Kill Switch Configuration Tool: `psutil>=5.8.0`, `pywin32>=306`
   - Others: Use standard Python libraries.
 
 ### Installation
@@ -130,10 +159,15 @@ This repository contains a collection of small, standalone Python projects desig
      - **Windows**: Download from [wkhtmltopdf.org](https://wkhtmltopdf.org/downloads.html).
      - **Linux**: `sudo apt-get install wkhtmltopdf`
      - **macOS**: `brew install wkhtmltopdf`
+   - For VPN Kill Switch Configuration Tool:
+     ```bash
+     pip install psutil pywin32
+     ```
+   - Word Frequency Analyzer and Text Analyzer require no additional packages.
    - Other projects require no additional packages.
 
 ### Exploring Projects
-1. Navigate to a project folder (e.g., `cd currency_converter`).
+1. Navigate to a project folder (e.g., `cd text_analyzer` or `cd vpn_killswitch`).
 2. Read the project-specific `README.md` for detailed setup and usage instructions.
 3. Run the project’s `main.py`:
    ```bash
@@ -168,13 +202,27 @@ Contributions are welcome! To contribute:
 - **EPUB to PDF Converter**:
   - **wkhtmltopdf Not Found**: Install `wkhtmltopdf` and verify path.
   - **GUI Issues**: Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
+- **Word Frequency Analyzer**:
+  - **File Errors**: Ensure valid `.txt` files are used and check file permissions.
+  - **GUI Issues**: Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
+- **Text Analyzer**:
+  - **File Encoding Errors**: The tool attempts multiple encodings (UTF-8, Latin-1, CP1252, ISO-8859-1). Check file encoding if errors occur.
+  - **GUI Issues**: Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
+- **VPN Kill Switch Configuration Tool**:
+  - **Access Denied Errors**: Run the executable as administrator for network control and installation.
+  - **Module Not Found**: Install `psutil` and `pywin32` (`pip install psutil pywin32`).
+  - **Network Interface Issues**: Verify interface name with `netsh interface show interface`.
+  - **Log File Issues**: Check `%USERPROFILE%\vpn_killswitch.log` for errors.
 - **Other Projects**: See project-specific `README.md` for detailed troubleshooting.
 
 ## Notes
 - **Version**: 1.0.0
-- **License**: [Specify license, e.g., MIT, or state "See LICENSE file"].
+- **License**: MIT (see LICENSE file).
 - **Structure**: Each project is in its own folder with `main.py` and `README.md`.
 - **Security**: For Currency Converter, store API keys securely and avoid sharing.
+- **Executables**:
+  - **Text Analyzer**: Use `auto-py-to-exe` to create a standalone executable (see project-specific README).
+  - **VPN Kill Switch Configuration Tool**: Use PyInstaller to build the executable (see project-specific README).
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).
