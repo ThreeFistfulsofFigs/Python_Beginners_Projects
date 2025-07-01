@@ -1,7 +1,7 @@
 # Python Beginners Projects
 
 ## Overview
-This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, and Morse code conversion.
+This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, and a simple chatbot.
 
 ## Projects
 
@@ -130,6 +130,18 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `morse_code_converter`
 - **Dependencies**: None (standard library)
 
+### 12. ChatBot
+- **Purpose**: A simple interactive chatbot that responds to user input based on string similarity matching, using a JSON file for response patterns.
+- **Features**:
+  - Matches user input to patterns in `responses.json` using string similarity.
+  - Supports dynamic time queries and exit commands.
+  - Case-insensitive matching with a similarity threshold.
+  - Displays similarity scores for transparency.
+- **Tech**: Python, `difflib`, `datetime`, `typing`, `json`, `os`.
+- **How to Use**: Ensure `responses.json` exists, run `main.py`, interact with the chatbot by entering phrases, and type "bye", "quit", or "exit" to end.
+- **Directory**: `chatbot`
+- **Dependencies**: None (standard library)
+
 ## Getting Started
 
 ### Prerequisites
@@ -145,6 +157,7 @@ This repository contains a collection of small, standalone Python projects desig
   - Text Analyzer: None (standard library)
   - VPN Kill Switch Configuration Tool: `psutil>=5.8.0`, `pywin32>=306`
   - Morse Code Converter: None (standard library)
+  - ChatBot: None (standard library)
   - Others: Use standard Python libraries.
 
 ### Installation
@@ -176,11 +189,11 @@ This repository contains a collection of small, standalone Python projects desig
      ```bash
      pip install psutil pywin32
      ```
-   - Word Frequency Analyzer, Text Analyzer, and Morse Code Converter require no additional packages.
+   - Word Frequency Analyzer, Text Analyzer, Morse Code Converter, and ChatBot require no additional packages.
    - Other projects require no additional packages.
 
 ### Exploring Projects
-1. Navigate to a project folder (e.g., `cd morse_code_converter` or `cd text_analyzer`).
+1. Navigate to a project folder (e.g., `cd chatbot` or `cd morse_code_converter`).
 2. Read the project-specific `README.md` for detailed setup and usage instructions.
 3. Run the project’s `main.py`:
    ```bash
@@ -229,6 +242,11 @@ Contributions are welcome! To contribute:
 - **Morse Code Converter**:
   - **Invalid Input Errors**: Ensure text contains only supported characters (letters, numbers, listed symbols). For Morse code, use dots (.), dashes (-), single spaces between letters, and double spaces between words.
   - **Empty Input**: Enter non-empty text or Morse code when prompted.
+- **ChatBot**:
+  - **No Response or "Sorry, I didn't understand you"**: Ensure input is similar to patterns in `responses.json` (e.g., "hello", "what time is it?"). The similarity threshold requires a close match.
+  - **Empty Input**: Enter non-empty text when prompted.
+  - **File Not Found Error**: Ensure `responses.json` exists in the `chatbot` directory.
+  - **Invalid JSON Format**: Verify `responses.json` contains valid JSON (key-value pairs of strings).
 
 ## Notes
 - **Version**: 1.0.0
@@ -239,6 +257,7 @@ Contributions are welcome! To contribute:
   - **Text Analyzer**: Use `auto-py-to-exe` to create a standalone executable (see project-specific README).
   - **VPN Kill Switch Configuration Tool**: Use PyInstaller to build the executable (see project-specific README).
   - **Morse Code Converter**: Can be converted to an executable using PyInstaller (see project-specific README).
+  - **ChatBot**: Can be converted to an executable using PyInstaller (see project-specific README).
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).

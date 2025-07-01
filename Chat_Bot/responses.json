@@ -1,0 +1,86 @@
+{
+    "hello": [
+        "Hello! How are you?",
+        "Hey there! What's up?",
+        "Hi! How's it going?"
+    ],
+    "hi": [
+        "Hi there! What's on your mind?",
+        "Hello! Need anything?",
+        "Hey! I'm here if you want to chat."
+    ],
+    "how are you?": [
+        "Great! Thanks! How about you?",
+        "Doing well, and you?",
+        "I'm good! What's new with you?"
+    ],
+    "how's it going?": [
+        "Pretty good, thanks for asking! What's up with you?",
+        "Can't complain! How about you?",
+        "All good here!"
+    ],
+    "what time is it?": "GET_TIME",
+    "what's the time?": "GET_TIME",
+    "tell me the time": "GET_TIME",
+    "bye": [
+        "Goodbye! Have a nice day!",
+        "Catch you later!",
+        "See you around!"
+    ],
+    "goodbye": [
+        "See you later! Take care!",
+        "Bye for now!",
+        "Talk to you soon!"
+    ],
+    "what's your name?": [
+        "I'm ChatBob, nice to meet you!",
+        "They call me ChatBob!"
+    ],
+    "who are you?": [
+        "I'm ChatBob, your friendly chatbot assistant!",
+        "Your chatbot buddy \u2014 ChatBob at your service!"
+    ],
+    "how can you help me?": [
+        "I can answer questions, tell you the time, or just chat! Try asking something like 'what time is it?' or 'how are you?'",
+        "Ask me anything \u2014 I'm good with small talk and quick info!"
+    ],
+    "what can you do?": [
+        "I can respond to greetings, tell you the time, or have a friendly chat. Just type something and I'll do my best!",
+        "Lots of things \u2014 try asking for the time, a joke, or just chat!"
+    ],
+    "thank you": [
+        "You're welcome!",
+        "Anytime!",
+        "No problem!"
+    ],
+    "thanks": [
+        "No problem, happy to help!",
+        "Glad to help!",
+        "You're very welcome!"
+    ],
+    "what's up?": [
+        "Not much, just here to chat!",
+        "Hey! What's new with you?",
+        "Just keeping things running!"
+    ],
+    "howdy": [
+        "Howdy partner!",
+        "Hey there!"
+    ],
+    "good night": [
+        "Sleep well!",
+        "Goodnight, talk to you soon!",
+        "Sweet dreams!"
+    ],
+    "what's the weather?": "GET_WEATHER",
+    "tell me a joke": "TELL_JOKE",
+    "flip a coin": "FLIP_COIN",
+    "roll a dice": "ROLL_DICE",
+    "i need help": [
+        "Sure, how can I assist you?",
+        "I'm here to help! What's the issue?"
+    ],
+    "what can you tell me?": [
+        "I can tell you the time, crack a joke, or just keep you company!"
+    ]
+}
