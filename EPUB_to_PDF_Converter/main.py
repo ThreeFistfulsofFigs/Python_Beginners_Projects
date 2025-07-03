@@ -16,7 +16,6 @@ import os  # For file and directory operations
 import threading  # For background conversion to keep UI responsive
 import tempfile  # For temporary file management
 import shutil  # For directory cleanup
-from pathlib import Path  # For path handling
 import time  # For delays and timeouts
 
 try:
@@ -547,7 +546,7 @@ class EPUBtoPDFConverter:
                                 link['class'] = link.get('class', []) + ['broken-link']
 
                         elif '#' in href:
-                            file_part, anchor_part = href.split('#', 1)
+                            _, anchor_part = href.split('#', 1)
                             if anchor_part in all_ids:
                                 _, new_id = all_ids[anchor_part]
                                 link['href'] = f"#{new_id}"
@@ -555,7 +554,6 @@ class EPUBtoPDFConverter:
                             else:
                                 self.log_message(f"Warning: Cross-file anchor not found: {anchor_part}")
                                 link['class'] = link.get('class', []) + ['broken-link']
-
                         else:
                             if not href.startswith(('http://', 'https://', 'mailto:', 'ftp://')):
                                 target_file_index = None
@@ -708,9 +706,8 @@ def main() -> None:
     # GUI INITIALIZATION
     # Create and run the Tkinter application
     root = tk.Tk()
-    app = EPUBtoPDFConverter(root)
+    EPUBtoPDFConverter(root)
     root.mainloop()
-
 
 if __name__ == "__main__":
     main()
