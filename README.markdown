@@ -1,4 +1,3 @@
-```markdown
 # Python Beginners Projects
 
 ## Overview
@@ -288,4 +287,3 @@ Contributions are welcome! To contribute:
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).
-```
