@@ -1,7 +1,8 @@
+```markdown
 # Python Beginners Projects
 
 ## Overview
-This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, and a simple chatbot.
+This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, and a Markdown to PDF converter.
 
 ## Projects
 
@@ -142,6 +143,19 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `chatbot`
 - **Dependencies**: None (standard library)
 
+### 13. Markdown to PDF Converter
+- **Purpose**: Converts Markdown files to PDF format using a Tkinter GUI, with progress tracking and customizable styling.
+- **Features**:
+  - GUI for selecting Markdown files and output directory.
+  - Progress bar and status updates during conversion.
+  - Cancellable conversion process.
+  - Support for dark mode with toggle button.
+  - Custom PDF styling with A4 format, proper margins, and syntax highlighting.
+- **Tech**: Python, `tkinter`, `markdown2`, `pdfkit`, `wkhtmltopdf`.
+- **How to Use**: Run `main.py` or `Markdown_converter.bat`, click "Select and Convert" to choose a `.md` file and destination, monitor progress, and toggle dark mode with the "Toggle Dark Mode" button.
+- **Directory**: `md_to_pdf_converter`
+- **Dependencies**: `markdown2>=2.3.0`, `pdfkit>=0.7.0`, `wkhtmltopdf`
+
 ## Getting Started
 
 ### Prerequisites
@@ -149,10 +163,11 @@ This repository contains a collection of small, standalone Python projects desig
   ```bash
   python --version
   ```
-- **External Tool** (for EPUB to PDF Converter): `wkhtmltopdf` (see project-specific README).
+- **External Tool** (for EPUB to PDF Converter and Markdown to PDF Converter): `wkhtmltopdf` (see project-specific README).
 - **Dependencies**:
   - Currency Converter: `requests>=2.25.0`
   - EPUB to PDF Converter: `ebooklib>=0.17.1`, `beautifulsoup4>=4.9.0`, `pdfkit>=0.7.0`
+  - Markdown to PDF Converter: `markdown2>=2.3.0`, `pdfkit>=0.7.0`
   - Word Frequency Analyzer: None (standard library)
   - Text Analyzer: None (standard library)
   - VPN Kill Switch Configuration Tool: `psutil>=5.8.0`, `pywin32>=306`
@@ -185,6 +200,14 @@ This repository contains a collection of small, standalone Python projects desig
      - **Windows**: Download from [wkhtmltopdf.org](https://wkhtmltopdf.org/downloads.html).
      - **Linux**: `sudo apt-get install wkhtmltopdf`
      - **macOS**: `brew install wkhtmltopdf`
+   - For Markdown to PDF Converter:
+     ```bash
+     pip install markdown2 pdfkit
+     ```
+     Install `wkhtmltopdf`:
+     - **Windows**: Download from [wkhtmltopdf.org](https://wkhtmltopdf.org/downloads.html).
+     - **Linux**: `sudo apt-get install wkhtmltopdf`
+     - **macOS**: `brew install wkhtmltopdf`
    - For VPN Kill Switch Configuration Tool:
      ```bash
      pip install psutil pywin32
@@ -193,7 +216,7 @@ This repository contains a collection of small, standalone Python projects desig
    - Other projects require no additional packages.
 
 ### Exploring Projects
-1. Navigate to a project folder (e.g., `cd chatbot` or `cd morse_code_converter`).
+1. Navigate to a project folder (e.g., `cd chatbot` or `cd md_to_pdf_converter`).
 2. Read the project-specific `README.md` for detailed setup and usage instructions.
 3. Run the project’s `main.py`:
    ```bash
@@ -228,6 +251,9 @@ Contributions are welcome! To contribute:
 - **EPUB to PDF Converter**:
   - **wkhtmltopdf Not Found**: Install `wkhtmltopdf` and verify path.
   - **GUI Issues**: Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
+- **Markdown to PDF Converter**:
+  - **wkhtmltopdf Not Found**: Install `wkhtmltopdf` and verify path.
+  - **GUI Issues**: Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
 - **Word Frequency Analyzer**:
   - **File Errors**: Ensure valid `.txt` files are used and check file permissions.
   - **GUI Issues**: Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
@@ -258,6 +284,8 @@ Contributions are welcome! To contribute:
   - **VPN Kill Switch Configuration Tool**: Use PyInstaller to build the executable (see project-specific README).
   - **Morse Code Converter**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **ChatBot**: Can be converted to an executable using PyInstaller (see project-specific README).
+  - **Markdown to PDF Converter**: Can be converted to an executable using PyInstaller (see project-specific README).
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).
+```
