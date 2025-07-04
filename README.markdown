@@ -1,7 +1,7 @@
 # Python Beginners Projects
 
 ## Overview
-This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, and a Markdown to PDF converter.
+This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, and a Blackjack game.
 
 ## Projects
 
@@ -155,6 +155,19 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `md_to_pdf_converter`
 - **Dependencies**: `markdown2>=2.3.0`, `pdfkit>=0.7.0`, `wkhtmltopdf`
 
+### 14. Blackjack Game
+- **Purpose**: A console-based Blackjack game where users play against a computer dealer following standard Blackjack rules.
+- **Features**:
+  - Interactive gameplay with hit/stand choices.
+  - Automatic blackjack detection for user and computer.
+  - Dynamic ace scoring (11 or 1) to prevent busting.
+  - Console clearing and logo display for an enhanced interface.
+  - Computer dealer hits until score is at least 17.
+- **Tech**: Python, `random`, `os`, `art`.
+- **How to Use**: Run `main.py`, type `y` to start or `n` to exit, and choose `y` to hit or `n` to stand during gameplay.
+- **Directory**: `blackjack`
+- **Dependencies**: `art>=5.9`
+
 ## Getting Started
 
 ### Prerequisites
@@ -172,7 +185,7 @@ This repository contains a collection of small, standalone Python projects desig
   - VPN Kill Switch Configuration Tool: `psutil>=5.8.0`, `pywin32>=306`
   - Morse Code Converter: None (standard library)
   - ChatBot: None (standard library)
-  - Others: Use standard Python libraries.
+  - Blackjack Game: `art>=5.9`
 
 ### Installation
 1. **Clone the Repository**:
@@ -211,11 +224,15 @@ This repository contains a collection of small, standalone Python projects desig
      ```bash
      pip install psutil pywin32
      ```
+   - For Blackjack Game:
+     ```bash
+     pip install art
+     ```
    - Word Frequency Analyzer, Text Analyzer, Morse Code Converter, and ChatBot require no additional packages.
    - Other projects require no additional packages.
 
 ### Exploring Projects
-1. Navigate to a project folder (e.g., `cd chatbot` or `cd md_to_pdf_converter`).
+1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, or `cd blackjack`).
 2. Read the project-specific `README.md` for detailed setup and usage instructions.
 3. Run the project’s `main.py`:
    ```bash
@@ -240,7 +257,7 @@ Contributions are welcome! To contribute:
   - Ensure Python 3.7+ is installed: `python --version`.
   - Add Python to PATH or use full path (e.g., `/usr/bin/python3`).
 - **Module Not Found**:
-  - Install missing dependencies (e.g., `pip install requests`).
+  - Install missing dependencies (e.g., `pip install requests` or `pip install art`).
   - Verify virtual environment is activated.
 
 ### Project-Specific Issues
@@ -272,6 +289,10 @@ Contributions are welcome! To contribute:
   - **Empty Input**: Enter non-empty text when prompted.
   - **File Not Found Error**: Ensure `responses.json` exists in the `chatbot` directory.
   - **Invalid JSON Format**: Verify `responses.json` contains valid JSON (key-value pairs of strings).
+- **Blackjack Game**:
+  - **Module Not Found**: Ensure the `art` library is installed (`pip install art`).
+  - **Console Not Clearing**: Verify `os` module support for your platform (Windows: `cls`, Unix-based: `clear`).
+  - **Invalid Input**: Use `y` or `n` for gameplay prompts; other inputs may cause unexpected behavior.
 
 ## Notes
 - **Version**: 1.0.0
@@ -284,6 +305,7 @@ Contributions are welcome! To contribute:
   - **Morse Code Converter**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **ChatBot**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Markdown to PDF Converter**: Can be converted to an executable using PyInstaller (see project-specific README).
+  - **Blackjack Game**: Can be converted to an executable using PyInstaller (see project-specific README).
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).
