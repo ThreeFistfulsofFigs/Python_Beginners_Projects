@@ -1,7 +1,7 @@
 # Python Beginners Projects
 
 ## Overview
-This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, and a Blackjack game.
+This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, and a true/false quiz game.
 
 ## Projects
 
@@ -23,7 +23,7 @@ This repository contains a collection of small, standalone Python projects desig
   - Processes EPUB content with optimized PDF styling.
   - Detailed logging and progress feedback.
 - **Tech**: Python, `tkinter`, `ebooklib`, `beautifulsoup4`, `pdfkit`, `wkhtmltopdf`.
-- **How to Use**: Run `main.py`, select an EPUB file and output directory, and click "Convert to PDF".
+- **How to Use**: Run `main.py`, select an EPUB file and outputioane directory, and click "Convert to PDF".
 - **Directory**: `epub_to_pdf_converter`
 - **Dependencies**: `ebooklib>=0.17.1`, `beautifulsoup4>=4.9.0`, `pdfkit>=0.7.0`, `wkhtmltopdf`
 
@@ -90,6 +90,7 @@ This repository contains a collection of small, standalone Python projects desig
 - **Tech**: Python, `collections`, `re`, `os`, `tkinter`.
 - **How to Use**: Run `main.py`, choose manual or file input, and view word frequencies.
 - **Directory**: `word_frequency_analyzer`
+- **Dependencies固定1stpage
 - **Dependencies**: None (standard library)
 
 ### 9. Text Analyzer
@@ -168,6 +169,20 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `blackjack`
 - **Dependencies**: `art>=5.9`
 
+### 15. Quiz Game
+- **Purpose**: A console-based true/false quiz game that presents questions, tracks scores, and displays results, designed to teach object-oriented programming and data management.
+- **Features**:
+  - Presents true/false questions from a predefined dataset.
+  - Tracks and displays user score after each question.
+  - Provides immediate feedback on correct/incorrect answers.
+  - Supports case-insensitive answer validation.
+  - Displays final score summary upon completion.
+  - Modular design with separate question and quiz logic classes.
+- **Tech**: Python, standard library (`input`, basic data handling).
+- **How to Use**: Run `main.py`, answer questions with `True` or `False`, and view final score. Exit with `Ctrl+C` if needed.
+- **Directory**: `quiz_game`
+- **Dependencies**: None (standard library)
+
 ## Getting Started
 
 ### Prerequisites
@@ -186,6 +201,7 @@ This repository contains a collection of small, standalone Python projects desig
   - Morse Code Converter: None (standard library)
   - ChatBot: None (standard library)
   - Blackjack Game: `art>=5.9`
+  - Quiz Game: None (standard library)
 
 ### Installation
 1. **Clone the Repository**:
@@ -228,11 +244,10 @@ This repository contains a collection of small, standalone Python projects desig
      ```bash
      pip install art
      ```
-   - Word Frequency Analyzer, Text Analyzer, Morse Code Converter, and ChatBot require no additional packages.
-   - Other projects require no additional packages.
+   - Word Frequency Analyzer, Text Analyzer, Morse Code Converter, ChatBot, and Quiz Game require no additional packages.
 
 ### Exploring Projects
-1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, or `cd blackjack`).
+1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, or `cd quiz_game`).
 2. Read the project-specific `README.md` for detailed setup and usage instructions.
 3. Run the project’s `main.py`:
    ```bash
@@ -293,6 +308,11 @@ Contributions are welcome! To contribute:
   - **Module Not Found**: Ensure the `art` library is installed (`pip install art`).
   - **Console Not Clearing**: Verify `os` module support for your platform (Windows: `cls`, Unix-based: `clear`).
   - **Invalid Input**: Use `y` or `n` for gameplay prompts; other inputs may cause unexpected behavior.
+- **Quiz Game**:
+  - **Invalid Input**: Enter only `True` or `False` (case-insensitive) when prompted. Other inputs may not be validated.
+  - **No Questions Displayed**: Ensure `data.py` exists in the `quiz_game` directory and contains valid question data.
+  - **File Not Found Error**: Confirm all required files (`main.py`, `question_model.py`, `quiz_brain.py`, `data.py`) are in the `quiz_game` directory.
+  - **Unexpected Termination**: Check for syntax errors in `data.py` or ensure question data includes `question` and `correct_answer` keys.
 
 ## Notes
 - **Version**: 1.0.0
@@ -306,6 +326,7 @@ Contributions are welcome! To contribute:
   - **ChatBot**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Markdown to PDF Converter**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Blackjack Game**: Can be converted to an executable using PyInstaller (see project-specific README).
+  - **Quiz Game**: Can be converted to an executable using PyInstaller (see project-specific README).
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).
