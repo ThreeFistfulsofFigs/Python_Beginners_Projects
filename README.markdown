@@ -1,7 +1,7 @@
 # Python Beginners Projects
 
 ## Overview
-This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, and a random turtle walk visualization.
+This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, a random turtle walk visualization, and a colorful spirograph generator.
 
 ## Projects
 
@@ -143,7 +143,7 @@ This repository contains a collection of small, standalone Python projects desig
 - **Dependencies**: None (standard library)
 
 ### 13. Markdown to PDF Converter
-- **Purpose**: Converts Markdown files to PDF format using a Tkinter GUI, with progress tracking and customizable styling.
+- **Purpose**: Converts Markdown files to PDF format using a Tk-vs GUI, with progress tracking and customizable styling.
 - **Features**:
   - GUI for selecting Markdown files and output directory.
   - Progress bar and status updates during conversion.
@@ -196,6 +196,18 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `random_turtle_walk`
 - **Dependencies**: None (standard library)
 
+### 17. Colorful Spirograph
+- **Purpose**: Creates a vibrant spirograph pattern using Python’s turtle graphics, with random RGB colors and a layered circular design.
+- **Features**:
+  - Draws 100 circles with a fixed radius and 5-degree rotation between each.
+  - Uses random RGB colors for each circle to create a colorful effect.
+  - Fast rendering with the turtle’s fastest speed setting.
+  - Interactive exit by clicking the graphics window.
+- **Tech**: Python, `turtle`, `random`.
+- **How to Use**: Run `main.py`, watch the turtle draw a colorful spirograph pattern, and click the window to exit.
+- **Directory**: `colorful_spirograph`
+- **Dependencies**: None (standard library)
+
 ## Getting Started
 
 ### Prerequisites
@@ -207,7 +219,7 @@ This repository contains a collection of small, standalone Python projects desig
 - **Dependencies**:
   - Currency Converter: `requests>=2.25.0`
   - EPUB to PDF Converter: `ebooklib>=0.17.1`, `beautifulsoup4>=4.9.0`, `pdfkit>=0.7.0`
-  - Markdown to PDF Converter: `markdown2>=2.3.0`, `pdfkit>=0.7.0`
+  - Markdown to PDF Converter: `markdown2>=2.3.01`, `pdfkit>=0.7.0`
   - Word Frequency Analyzer: None (standard library)
   - Text Analyzer: None (standard library)
   - VPN Kill Switch Configuration Tool: `psutil>=5.8.0`, `pywin32>=306`
@@ -215,7 +227,8 @@ This repository contains a collection of small, standalone Python projects desig
   - ChatBot: None (standard library)
   - Blackjack Game: None (requires local `art.py` file in the project directory)
   - Quiz Game: None (standard library)
-  - Random Turtle Walk: None (standard library)
+  - Random Turtle Walk: The turtle module requires `tkinter`. Install on Linux with `sudo apt-get install python3-tk`.
+  - Colorful Spirograph: None (standard library)
 
 ### Installation
 1. **Clone the Repository**:
@@ -254,10 +267,10 @@ This repository contains a collection of small, standalone Python projects desig
      ```bash
      pip install psutil pywin32
      ```
-   - Word Frequency Analyzer, Text Analyzer, Morse Code Converter, ChatBot, Quiz Game, and Random Turtle Walk require no additional packages.
+   - Word Frequency Analyzer, Text Analyzer, Morse Code Converter, ChatBot, Quiz Game, Random Turtle Walk, and Colorful Spirograph require no additional packages.
 
 ### Exploring Projects
-1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`).
+1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`, `cd colorful_spirograph`).
 2. Read the project-specific `README.md` for detailed setup and usage instructions.
 3. Run the project’s `main.py`:
    ```bash
@@ -328,6 +341,10 @@ Contributions are welcome! To contribute:
   - **GUI Issues**: Ensure `tkinter` is installed, as the `turtle` module relies on it (`sudo apt-get install python3-tk` on Linux).
   - **Window Not Displaying**: Verify Python is configured to display graphical windows (e.g., ensure a display server is running on Linux).
   - **Slow Performance**: The high speed (40) is set, but reduce the number of steps (e.g., from 500 to 200) if performance is an issue.
+- **Colorful Spirograph**:
+  - **GUI Issues**: Ensure `tkinter` is installed, as the `turtle` module relies on it (`sudo apt-get install python3-tk` on Linux).
+  - **Window Not Displaying**: Verify Python is configured to display graphical windows (e.g., ensure a display server is running on Linux).
+  - **Slow Performance**: The turtle speed is set to `"fastest"`. If performance is slow, reduce the number of iterations (e.g., from 100 to 50 in `main.py`).
 
 ## Notes
 - **Version**: 1.0.0
@@ -343,6 +360,7 @@ Contributions are welcome! To contribute:
   - **Blackjack Game**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Quiz Game**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Random Turtle Walk**: Can be converted to an executable using PyInstaller (see project-specific README).
+  - **Colorful Spirograph**: Can be converted to an executable using PyInstaller (see project-specific README).
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).
