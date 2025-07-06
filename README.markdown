@@ -1,7 +1,7 @@
 # Python Beginners Projects
 
 ## Overview
-This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, a random turtle walk visualization, and a colorful spirograph generator.
+This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, a random turtle walk visualization, a colorful spirograph generator, and a modern art painting generator.
 
 ## Projects
 
@@ -143,7 +143,7 @@ This repository contains a collection of small, standalone Python projects desig
 - **Dependencies**: None (standard library)
 
 ### 13. Markdown to PDF Converter
-- **Purpose**: Converts Markdown files to PDF format using a Tk-vs GUI, with progress tracking and customizable styling.
+- **Purpose**: Converts Markdown files to PDF format using a Tkinter GUI, with progress tracking and customizable styling.
 - **Features**:
   - GUI for selecting Markdown files and output directory.
   - Progress bar and status updates during conversion.
@@ -208,6 +208,19 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `colorful_spirograph`
 - **Dependencies**: None (standard library)
 
+### 18. Modern Art Painting Generator
+- **Purpose**: Creates a modern art piece using Python’s turtle graphics, drawing a 10x10 grid of colored dots with random RGB colors, saved as a PNG image.
+- **Features**:
+  - Draws a 10x10 grid of 100 dots, each 20 units in diameter, spaced 50 units apart.
+  - Uses a predefined list of RGB colors for vibrant, random dot coloring.
+  - Saves the artwork as a PNG file (`modern_art_drawing.png`) using a screenshot-based approach.
+  - Includes a commented-out reference for extracting colors from an image using `colorgram`.
+  - Interactive exit by clicking the Turtle graphics window.
+- **Tech**: Python, `turtle`, `random`, `os`, `Pillow`.
+- **How to Use**: Run `main.py`, watch the turtle draw the dot grid, and click the window to exit. The output is saved as `modern_art_drawing.png`.
+- **Directory**: `modern_art_painting_generator`
+- **Dependencies**: `Pillow>=8.0.0`
+
 ## Getting Started
 
 ### Prerequisites
@@ -219,7 +232,7 @@ This repository contains a collection of small, standalone Python projects desig
 - **Dependencies**:
   - Currency Converter: `requests>=2.25.0`
   - EPUB to PDF Converter: `ebooklib>=0.17.1`, `beautifulsoup4>=4.9.0`, `pdfkit>=0.7.0`
-  - Markdown to PDF Converter: `markdown2>=2.3.01`, `pdfkit>=0.7.0`
+  - Markdown to PDF Converter: `markdown2>=2.3.0`, `pdfkit>=0.7.0`
   - Word Frequency Analyzer: None (standard library)
   - Text Analyzer: None (standard library)
   - VPN Kill Switch Configuration Tool: `psutil>=5.8.0`, `pywin32>=306`
@@ -229,6 +242,7 @@ This repository contains a collection of small, standalone Python projects desig
   - Quiz Game: None (standard library)
   - Random Turtle Walk: The turtle module requires `tkinter`. Install on Linux with `sudo apt-get install python3-tk`.
   - Colorful Spirograph: None (standard library)
+  - Modern Art Painting Generator: `Pillow>=8.0.0`
 
 ### Installation
 1. **Clone the Repository**:
@@ -267,10 +281,14 @@ This repository contains a collection of small, standalone Python projects desig
      ```bash
      pip install psutil pywin32
      ```
+   - For Modern Art Painting Generator:
+     ```bash
+     pip install Pillow
+     ```
    - Word Frequency Analyzer, Text Analyzer, Morse Code Converter, ChatBot, Quiz Game, Random Turtle Walk, and Colorful Spirograph require no additional packages.
 
 ### Exploring Projects
-1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`, `cd colorful_spirograph`).
+1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`, `cd colorful_spirograph`, `cd modern_art_painting_generator`).
 2. Read the project-specific `README.md` for detailed setup and usage instructions.
 3. Run the project’s `main.py`:
    ```bash
@@ -345,6 +363,12 @@ Contributions are welcome! To contribute:
   - **GUI Issues**: Ensure `tkinter` is installed, as the `turtle` module relies on it (`sudo apt-get install python3-tk` on Linux).
   - **Window Not Displaying**: Verify Python is configured to display graphical windows (e.g., ensure a display server is running on Linux).
   - **Slow Performance**: The turtle speed is set to `"fastest"`. If performance is slow, reduce the number of iterations (e.g., from 100 to 50 in `main.py`).
+- **Modern Art Painting Generator**:
+  - **GUI Issues**: Ensure `tkinter` is installed, as the `turtle` module relies on it (`sudo apt-get install python3-tk` on Linux).
+  - **Window Not Displaying**: Verify Python is configured to display graphical windows (e.g., ensure a display server is running on Linux).
+  - **Module Not Found**: Install Pillow (`pip install Pillow`).
+  - **File Not Saved**: Ensure write permissions in the project directory and check for `temp.eps` cleanup issues.
+  - **Commented-Out Color Extraction**: To use the `colorgram` reference, install `colorgram.py` (`pip install colorgram.py`) and provide a valid `image.jpg`.
 
 ## Notes
 - **Version**: 1.0.0
@@ -361,6 +385,7 @@ Contributions are welcome! To contribute:
   - **Quiz Game**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Random Turtle Walk**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Colorful Spirograph**: Can be converted to an executable using PyInstaller (see project-specific README).
+  - **Modern Art Painting Generator**: Can be converted to an executable using PyInstaller (see project-specific README).
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).
