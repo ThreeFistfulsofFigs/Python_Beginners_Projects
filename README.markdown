@@ -1,7 +1,7 @@
 # Python Beginners Projects
 
 ## Overview
-This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, a random turtle walk visualization, a colorful spirograph generator, and a modern art painting generator.
+This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, a random turtle walk visualization, a colorful spirograph generator, a modern art painting generator, and a classic Snake game.
 
 ## Projects
 
@@ -221,6 +221,19 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `modern_art_painting_generator`
 - **Dependencies**: `Pillow>=8.0.0`
 
+### 19. Snake Game
+- **Purpose**: A classic Snake game where players control a snake to collect food, grow, and avoid collisions with walls or its own tail, using Python’s Turtle graphics.
+- **Features**:
+  - Interactive gameplay with arrow key controls.
+  - Dynamic snake growth and score increase on food consumption.
+  - Collision detection for walls and tail, with a "GAME OVER" message.
+  - Real-time score display using a scoreboard.
+  - Smooth animations with a modular design for snake, food, and scoreboard.
+- **Tech**: Python, `turtle`, `random`, `time`.
+- **How to Use**: Run `main.py`, use arrow keys to control the snake, collect food to grow, and avoid collisions. Click the window to exit after "GAME OVER".
+- **Directory**: `snake_game`
+- **Dependencies**: None (standard library, requires `tkinter` for `turtle`)
+
 ## Getting Started
 
 ### Prerequisites
@@ -243,6 +256,7 @@ This repository contains a collection of small, standalone Python projects desig
   - Random Turtle Walk: The turtle module requires `tkinter`. Install on Linux with `sudo apt-get install python3-tk`.
   - Colorful Spirograph: None (standard library)
   - Modern Art Painting Generator: `Pillow>=8.0.0`
+  - Snake Game: None (standard library, requires `tkinter` for `turtle`)
 
 ### Installation
 1. **Clone the Repository**:
@@ -285,10 +299,15 @@ This repository contains a collection of small, standalone Python projects desig
      ```bash
      pip install Pillow
      ```
+   - For Snake Game:
+     - Install `tkinter` on Linux if needed:
+       ```bash
+       sudo apt-get install python3-tk
+       ```
    - Word Frequency Analyzer, Text Analyzer, Morse Code Converter, ChatBot, Quiz Game, Random Turtle Walk, and Colorful Spirograph require no additional packages.
 
 ### Exploring Projects
-1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`, `cd colorful_spirograph`, `cd modern_art_painting_generator`).
+1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`, `cd colorful_spirograph`, `cd modern_art_painting_generator`, `cd snake_game`).
 2. Read the project-specific `README.md` for detailed setup and usage instructions.
 3. Run the project’s `main.py`:
    ```bash
@@ -369,6 +388,11 @@ Contributions are welcome! To contribute:
   - **Module Not Found**: Install Pillow (`pip install Pillow`).
   - **File Not Saved**: Ensure write permissions in the project directory and check for `temp.eps` cleanup issues.
   - **Commented-Out Color Extraction**: To use the `colorgram` reference, install `colorgram.py` (`pip install colorgram.py`) and provide a valid `image.jpg`.
+- **Snake Game**:
+  - **GUI Issues**: Ensure `tkinter` is installed, as the `turtle` module relies on it (`sudo apt-get install python3-tk` on Linux).
+  - **Window Not Displaying**: Verify Python is configured to display graphical windows (e.g., ensure a display server is running on Linux).
+  - **Slow Performance**: Adjust the `time.sleep(0.1)` value in `main.py` to increase or decrease game speed.
+  - **No Response to Arrow Keys**: Ensure the game window is focused and verify key bindings in `main.py`.
 
 ## Notes
 - **Version**: 1.0.0
@@ -386,6 +410,7 @@ Contributions are welcome! To contribute:
   - **Random Turtle Walk**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Colorful Spirograph**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Modern Art Painting Generator**: Can be converted to an executable using PyInstaller (see project-specific README).
+  - **Snake Game**: Can be converted to an executable using PyInstaller (see project-specific README).
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).
