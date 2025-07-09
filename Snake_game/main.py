@@ -3,7 +3,7 @@
 # ============================================================================
 # This script orchestrates the Snake game, integrating the Snake, Food, and
 # Scoreboard classes. It sets up the game window, handles user input, updates the
-# game state, and detects collisions with food Ang walls, food, or the snake's tail.
+# game state, and detects collisions with walls, food, or the snake's tail.
 # ============================================================================
 
 # Import required libraries
@@ -72,20 +72,16 @@ while game_is_on:
 
     # WALL COLLISION DETECTION
     # Check if snake's head hits the wall
-    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        # GAME TERMINATION
-        # End game and display game-over message
-        game_is_on = False
-        scoreboard.game_over()
+    if snake.head.xcor() > 285 or snake.head.xcor() < -295 or snake.head.ycor() > 285 or snake.head.ycor() < -285:
+        scoreboard.reset()
+        snake.reset()
     
     # TAIL COLLISION DETECTION
     # Check if snake's head hits its own tail
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
-            # GAME TERMINATION
-            # End game and display game-over message
-            game_is_on = False
-            scoreboard.game_over()
+            scoreboard.reset()
+            snake.reset()
     
 # GAME EXIT
 # Wait for click to close window

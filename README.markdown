@@ -1,7 +1,7 @@
 # Python Beginners Projects
 
 ## Overview
-This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, a random turtle walk visualization, a colorful spirograph generator, a modern art painting generator, and a classic Snake game.
+This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, a random turtle walk visualization, a colorful spirograph generator, a modern art painting generator, a classic Snake game, and a classic Pong game.
 
 ## Projects
 
@@ -234,6 +234,21 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `snake_game`
 - **Dependencies**: None (standard library, requires `tkinter` for `turtle`)
 
+### 20. Pong Game
+- **Purpose**: A classic Pong game where two players control paddles to hit a ball back and forth, scoring points when the opponent misses, using Python’s Turtle graphics.
+- **Features**:
+  - Two-player gameplay: Left player uses W/S keys, right player uses Up/Down arrow keys.
+  - Realistic ball physics with consistent bouncing patterns.
+  - Accurate collision detection for walls, paddles, and scoring zones.
+  - Real-time score display with large, visible numbers.
+  - Smooth paddle controls with 25-unit movement increments.
+  - Clean visual design with a black background, white paddles, and a violet ball.
+  - Modular architecture with separate classes for Ball, Paddle, and Scoreboard.
+- **Tech**: Python, `turtle`, `time`.
+- **How to Use**: Run `main.py`, use W/S keys for the left paddle and Up/Down arrows for the right paddle, score points by getting the ball past the opponent, and click the window to exit.
+- **Directory**: `pong_game`
+- **Dependencies**: None (standard library, requires `tkinter` for `turtle`)
+
 ## Getting Started
 
 ### Prerequisites
@@ -257,6 +272,7 @@ This repository contains a collection of small, standalone Python projects desig
   - Colorful Spirograph: None (standard library)
   - Modern Art Painting Generator: `Pillow>=8.0.0`
   - Snake Game: None (standard library, requires `tkinter` for `turtle`)
+  - Pong Game: None (standard library, requires `tkinter` for `turtle`)
 
 ### Installation
 1. **Clone the Repository**:
@@ -304,10 +320,15 @@ This repository contains a collection of small, standalone Python projects desig
        ```bash
        sudo apt-get install python3-tk
        ```
+   - For Pong Game:
+     - Install `tkinter` on Linux if needed:
+       ```bash
+       sudo apt-get install python3-tk
+       ```
    - Word Frequency Analyzer, Text Analyzer, Morse Code Converter, ChatBot, Quiz Game, Random Turtle Walk, and Colorful Spirograph require no additional packages.
 
 ### Exploring Projects
-1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`, `cd colorful_spirograph`, `cd modern_art_painting_generator`, `cd snake_game`).
+1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`, `cd colorful_spirograph`, `cd modern_art_painting_generator`, `cd snake_game`, `cd pong_game`).
 2. Read the project-specific `README.md` for detailed setup and usage instructions.
 3. Run the project’s `main.py`:
    ```bash
@@ -393,6 +414,12 @@ Contributions are welcome! To contribute:
   - **Window Not Displaying**: Verify Python is configured to display graphical windows (e.g., ensure a display server is running on Linux).
   - **Slow Performance**: Adjust the `time.sleep(0.1)` value in `main.py` to increase or decrease game speed.
   - **No Response to Arrow Keys**: Ensure the game window is focused and verify key bindings in `main.py`.
+- **Pong Game**:
+  - **GUI Issues**: Ensure `tkinter` is installed, as the `turtle` module relies on it (`sudo apt-get install python3-tk` on Linux).
+  - **Window Not Displaying**: Verify Python is configured to display graphical windows (e.g., ensure a display server is running on Linux).
+  - **Slow Performance**: Adjust the `time.sleep(0.06)` value in `main.py` to increase or decrease game speed.
+  - **No Response to Keys**: Ensure the game window is focused and verify key bindings (W/S for left player, Up/Down for right player) in `main.py`.
+  - **File Not Found**: Ensure all required files (`main.py`, `paddle.py`, `ball.py`, `scoreboard.py`) are in the `pong_game` directory.
 
 ## Notes
 - **Version**: 1.0.0
@@ -411,6 +438,7 @@ Contributions are welcome! To contribute:
   - **Colorful Spirograph**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Modern Art Painting Generator**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Snake Game**: Can be converted to an executable using PyInstaller (see project-specific README).
+  - **Pong Game**: Can be converted to an executable using PyInstaller (see project-specific README).
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).

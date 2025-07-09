@@ -1,15 +1,16 @@
 # ============================================================================
 # SCOREBOARD MODULE
 # ============================================================================
-# This script defines the Scoreboard class for a Snake game, using the Turtle
-# library to display the current score and game-over message. The scoreboard is
-# positioned at the top of the screen and updates dynamically as the player scores.
+# This module defines the Scoreboard class for a Snake game, utilizing the Turtle
+# library to display and manage the current score and high score. The scoreboard
+# is positioned at the top of the game window and updates dynamically as the
+# player earns points or resets the game.
 # ============================================================================
 
 # Import required libraries
 from turtle import Turtle
 # CONSTANT DEFINITION
-# Define alignment and font settings for text display
+# Define text alignment and font style for scoreboard display
 ALIGNMENT = "center"
 FONT = ("Courier", 24, "normal")
 
@@ -18,50 +19,67 @@ class Scoreboard(Turtle):
         """
         Initialize the Scoreboard object.
 
-        Sets up the scoreboard as a Turtle object, positions it at the top of the
-        screen, and displays the initial score. The turtle is hidden to show only
+        Configures the scoreboard as a Turtle object, positions it at the top of
+        the screen, initializes the score to zero, loads the high score from a
+        file, and displays the initial score. The turtle is hidden to show only
         the text.
         """
         # INHERITANCE SETUP
-        # Initialize Turtle parent class
+        # Call Turtle parent class constructor
         super().__init__()
         # SCORE INITIALIZATION
-        # Set starting score to 0
+        # Set initial score to 0 and load high score from file
         self.score = 0
+        with open("data.txt", "r") as data:
+            self.high_score = int(data.read())
+            
         # TURTLE CONFIGURATION
-        # Set color, position, and hide the turtle
+        # Configure color, position, and hide the turtle
         self.color("white")
         self.penup()
         self.goto(0, 270)
         # SCORE DISPLAY
-        # Write initial score to the screen
-        self.write(f"Score: {self.score}", align=ALIGNMENT, font=FONT)
+        # Display initial score and high score
+        self.write(f"Score: {self.score}   High Score: {self.high_score}", align=ALIGNMENT, font=FONT)
         self.hideturtle()
+        self.update()
         
     def increase_score(self):
         """
-        Increment the score and update the display.
+        Increment the score and refresh the display.
 
-        Increases the score by 1, clears the previous display, and redraws the
-        updated score.
+        Increases the score by 1 and updates the scoreboard display to reflect
+        the new score while maintaining the high score.
         """
-        # SCORE UPDATE
-        # Increment score by 1
+        # SCORE INCREMENT
+        # Add 1 to the current score
         self.score += 1
-        # DISPLAY REFRESH
-        # Clear and redraw the updated score
-        self.clear()
-        self.write(f"Score: {self.score}", align=ALIGNMENT, font=FONT)
+        # DISPLAY UPDATE
+        # Refresh the scoreboard with updated score
+        self.update()
         
-    def game_over(self):
+    def update(self):
         """
-        Display the game-over message.
+        Update the scoreboard display.
 
-        Moves the scoreboard to the center of the screen and displays 'GAME OVER'.
+        Clears the previous scoreboard text and redraws the current score and
+        high score at the designated position.
         """
-        # POSITION UPDATE
-        # Move to center of screen
-        self.goto(0, 0)
-        # GAME OVER DISPLAY
-        # Write game-over message
-        self.write("GAME OVER", align=ALIGNMENT, font=FONT)
+        self.clear()
+        self.write(f"Score: {self.score}     High Score: {self.high_score}", align=ALIGNMENT, font=FONT)
+        
+    def reset(self):
+        """
+        Reset the score and update the high score if necessary.
+
+        Checks if the current score exceeds the high score, updates the high score
+        if needed, saves it to a file, resets the current score to zero, and
+        refreshes the display.
+        """
+        if self.score > self.high_score:
+            self.high_score = self.score
+            with open("data.txt", mode="w") as data:
+                data.write(f"{self.high_score}")
+                
+        self.score = 0
+        self.update()
