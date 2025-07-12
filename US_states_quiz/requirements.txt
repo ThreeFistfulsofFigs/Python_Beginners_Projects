@@ -1,0 +1,6 @@
+# ==========================================================
+# Project Dependencies
+# Description: Lists the required Python packages for the US States Quiz project
+# ==========================================================
+pandas~=2.3.1
+cx_Freeze~=8.3.0
