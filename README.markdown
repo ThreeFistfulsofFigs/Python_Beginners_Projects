@@ -249,6 +249,20 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `pong_game`
 - **Dependencies**: None (standard library, requires `tkinter` for `turtle`)
 
+### 21. Miles to Kilometers Converter
+- **Purpose**: A simple GUI application that converts miles to kilometers using Python's tkinter library, featuring an intuitive interface with real-time conversion capabilities.
+- **Features**:
+  - Clean, organized layout with clearly labeled input and output fields.
+  - Multiple input methods: Click "Calculate" button or press Enter key.
+  - Precise conversion using the international standard factor (1 mile = 1.609344 kilometers).
+  - Error handling for invalid inputs with graceful fallback to zero display.
+  - Grid-based layout matching standard converter applications.
+  - Comprehensive banner-style code documentation.
+- **Tech**: Python, `tkinter`.
+- **How to Use**: Run `main.py`, enter a number in the input field, and either click "Calculate" or press Enter to see the result in kilometers.
+- **Directory**: `miles_to_km_converter`
+- **Dependencies**: None (standard library, requires `tkinter`)
+
 ## Getting Started
 
 ### Prerequisites
