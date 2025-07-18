@@ -1,7 +1,7 @@
 # Python Beginners Projects
 
 ## Overview
-This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, a random turtle walk visualization, a colorful spirograph generator, a modern art painting generator, a classic Snake game, and a classic Pong game.
+This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, a random turtle walk visualization, a colorful spirograph generator, a modern art painting generator, a classic Snake game, a classic Pong game, a Pomodoro timer (with Tkinter and Kivy versions), and a miles to kilometers converter.
 
 ## Projects
 
@@ -118,43 +118,6 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `vpn_killswitch`
 - **Dependencies**: `psutil>=5.8.0`, `pywin32>=306`
 
-### 11. Morse Code Converter
-- **Purpose**: Converts text to Morse code and vice versa, supporting letters, numbers, and common symbols.
-- **Features**:
-  - Converts text to Morse code with space-separated codes.
-  - Converts Morse code to text, handling single and double spaces.
-  - Supports uppercase/lowercase letters, numbers, and symbols.
-  - Interactive CLI with error handling and continue/exit options.
-- **Tech**: Python, `typing`.
-- **How to Use**: Run `main.py`, choose to convert text to Morse, Morse to text, or exit, then follow prompts.
-- **Directory**: `morse_code_converter`
-- **Dependencies**: None (standard library)
-
-### 12. ChatBot
-- **Purpose**: A simple interactive chatbot that responds to user input based on string similarity matching, using a JSON file for response patterns.
-- **Features**:
-  - Matches user input to patterns in `responses.json` using string similarity.
-  - Supports dynamic time queries and exit commands.
-  - Case-insensitive matching with a similarity threshold.
-  - Displays similarity scores for transparency.
-- **Tech**: Python, `difflib`, `datetime`, `typing`, `json`, `os`.
-- **How to Use**: Ensure `responses.json` exists, run `main.py`, interact with the chatbot by entering phrases, and type "bye", "quit", or "exit" to end.
-- **Directory**: `chatbot`
-- **Dependencies**: None (standard library)
-
-### 13. Markdown to PDF Converter
-- **Purpose**: Converts Markdown files to PDF format using a Tkinter GUI, with progress tracking and customizable styling.
-- **Features**:
-  - GUI for selecting Markdown files and output directory.
-  - Progress bar and status updates during conversion.
-  - Cancellable conversion process.
-  - Support for dark mode with toggle button.
-  - Custom PDF styling with A4 format, proper margins, and syntax highlighting.
-- **Tech**: Python, `tkinter`, `markdown2`, `pdfkit`, `wkhtmltopdf`.
-- **How to Use**: Run `main.py` or `Markdown_converter.bat`, click "Select and Convert" to choose a `.md` file and destination, monitor progress, and toggle dark mode with the "Toggle Dark Mode" button.
-- **Directory**: `md_to_pdf_converter`
-- **Dependencies**: `markdown2>=2.3.0`, `pdfkit>=0.7.0`, `wkhtmltopdf`
-
 ### 14. Blackjack Game
 - **Purpose**: A console-based Blackjack game where users play against a computer dealer following standard Blackjack rules.
 - **Features**:
@@ -263,6 +226,38 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `miles_to_km_converter`
 - **Dependencies**: None (standard library, requires `tkinter`)
 
+### 22. Pomodoro Timer (Tkinter Version)
+- **Purpose**: A GUI-based Pomodoro Timer implementing the Pomodoro Technique to enhance productivity through timed work and break sessions, built with Tkinter.
+- **Features**:
+  - Customizable work, short break, and long break durations (default: 25/5/30 minutes).
+  - Multiple themes: default, dark, forest, and ocean.
+  - Progress ring visualizing session progress with dynamic color changes.
+  - Random motivational quotes displayed after work sessions.
+  - Session tracking with daily stats and checkmarks for completed sessions.
+  - Data persistence via `pomodoro_settings.json`.
+  - Keyboard shortcuts: Space (start/pause/resume), R (reset), S (settings), T (toggle theme).
+  - Sound notifications for session transitions (Windows only; system bell elsewhere).
+- **Tech**: Python, `tkinter`, `winsound` (Windows only), `json`, `os`, `datetime`, `random`, `platform`, `threading`.
+- **How to Use**: Run `main.py`, click "Start" or press Space to begin, use buttons or shortcuts to control, and adjust settings/themes as needed.
+- **Directory**: `pomodoro_timer`
+- **Dependencies**: None (standard library, requires `tkinter`)
+
+### 23. Pomodoro Timer (Kivy Version)
+- **Purpose**: A GUI-based Pomodoro Timer implementing the Pomodoro Technique, built with Kivy as an alternative to the Tkinter version, offering a modern UI with similar functionality.
+- **Features**:
+  - Customizable work, short break, and long break durations (default: 25/5/30 minutes).
+  - Light and dark themes with dynamic color updates.
+  - Session statistics tracking daily sessions, focused time, and streak.
+  - Scrollable session history for the last 10 sessions.
+  - Random motivational quotes displayed after work sessions.
+  - Keyboard shortcuts: Space (start/pause), R (reset), S (settings), T (toggle theme).
+  - Sound notifications for session transitions (Windows only; system bell elsewhere).
+  - Data persistence via `pomodoro_settings.json`.
+- **Tech**: Python, `kivy`, `winsound` (Windows only), `json`, `os`, `datetime`, `random`, `platform`, `threading`.
+- **How to Use**: Run `main.py`, click "START" or press Space to begin/pause, use buttons or shortcuts to control, and adjust settings/themes as needed.
+- **Directory**: `pomodoro_timer_kivy`
+- **Dependencies**: `kivy>=2.0.0`
+
 ## Getting Started
 
 ### Prerequisites
@@ -273,8 +268,8 @@ This repository contains a collection of small, standalone Python projects desig
 - **External Tool** (for EPUB to PDF Converter and Markdown to PDF Converter): `wkhtmltopdf` (see project-specific README).
 - **Dependencies**:
   - Currency Converter: `requests>=2.25.0`
-  - EPUB to PDF Converter: `ebooklib>=0.17.1`, `beautifulsoup4>=4.9.0`, `pdfkit>=0.7.0`
-  - Markdown to PDF Converter: `markdown2>=2.3.0`, `pdfkit>=0.7.0`
+  - EPUB to PDF Converter: `ebooklib>=0.17.1`, `beautifulsoup4>=4.9.0`, `pdfkit>=0.7.0`, `wkhtmltopdf`
+  - Markdown to PDF Converter: `markdown2>=2.3.0`, `pdfkit>=0.7.0`, `wkhtmltopdf`
   - Word Frequency Analyzer: None (standard library)
   - Text Analyzer: None (standard library)
   - VPN Kill Switch Configuration Tool: `psutil>=5.8.0`, `pywin32>=306`
@@ -287,6 +282,8 @@ This repository contains a collection of small, standalone Python projects desig
   - Modern Art Painting Generator: `Pillow>=8.0.0`
   - Snake Game: None (standard library, requires `tkinter` for `turtle`)
   - Pong Game: None (standard library, requires `tkinter` for `turtle`)
+  - Pomodoro Timer (Tkinter Version): None (standard library, requires `tkinter`)
+  - Pomodoro Timer (Kivy Version): `kivy>=2.0.0`
 
 ### Installation
 1. **Clone the Repository**:
@@ -339,10 +336,24 @@ This repository contains a collection of small, standalone Python projects desig
        ```bash
        sudo apt-get install python3-tk
        ```
+   - For Pomodoro Timer (Tkinter Version):
+     - Install `tkinter` on Linux if needed:
+       ```bash
+       sudo apt-get install python3-tk
+       ```
+   - For Pomodoro Timer (Kivy Version):
+     - Install `kivy`:
+       ```bash
+       pip install kivy
+       ```
+     - On Linux, install Kivy dependencies if needed:
+       ```bash
+       sudo apt-get install python3-dev libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+       ```
    - Word Frequency Analyzer, Text Analyzer, Morse Code Converter, ChatBot, Quiz Game, Random Turtle Walk, and Colorful Spirograph require no additional packages.
 
 ### Exploring Projects
-1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`, `cd colorful_spirograph`, `cd modern_art_painting_generator`, `cd snake_game`, `cd pong_game`).
+1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`, `cd colorful_spirograph`, `cd modern_art_painting_generator`, `cd snake_game`, `cd pong_game`, `cd pomodoro_timer`, `cd pomodoro_timer_kivy`).
 2. Read the project-specific `README.md` for detailed setup and usage instructions.
 3. Run the project’s `main.py`:
    ```bash
@@ -434,6 +445,20 @@ Contributions are welcome! To contribute:
   - **Slow Performance**: Adjust the `time.sleep(0.06)` value in `main.py` to increase or decrease game speed.
   - **No Response to Keys**: Ensure the game window is focused and verify key bindings (W/S for left player, Up/Down for right player) in `main.py`.
   - **File Not Found**: Ensure all required files (`main.py`, `paddle.py`, `ball.py`, `scoreboard.py`) are in the `pong_game` directory.
+- **Pomodoro Timer (Tkinter Version)**:
+  - **GUI Not Displaying**: Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
+  - **Sound Issues**: On non-Windows systems, sounds fall back to the system bell (`\a`). Ensure system audio is enabled.
+  - **File Errors**: Check write permissions for `pomodoro_settings.json` if saving fails.
+  - **Window Not Responding**: Ensure the window is focused for keyboard shortcuts to work.
+- **Pomodoro Timer (Kivy Version)**:
+  - **GUI Not Displaying**: Ensure `kivy` is installed (`pip install kivy`) and Python is configured for graphical applications (e.g., ensure a display server is running on Linux).
+  - **Sound Issues**: On non-Windows systems, sounds fall back to the system bell (`\a`). Ensure system audio is enabled.
+  - **File Errors**: Check write permissions for `pomodoro_settings.json` if saving fails.
+  - **Window Not Responding**: Ensure the window is focused for keyboard shortcuts to work.
+  - **Kivy Installation Issues**: Verify dependencies (SDL2, GLEW, etc.) are installed. On Linux, you may need:
+    ```bash
+    sudo apt-get install python3-dev libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+    ```
 
 ## Notes
 - **Version**: 1.0.0
@@ -453,6 +478,8 @@ Contributions are welcome! To contribute:
   - **Modern Art Painting Generator**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Snake Game**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Pong Game**: Can be converted to an executable using PyInstaller (see project-specific README).
+  - **Pomodoro Timer (Tkinter Version)**: Can be converted to an executable using PyInstaller (see project-specific README).
+  - **Pomodoro Timer (Kivy Version)**: Can be converted to an executable using PyInstaller (see project-specific README).
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).
