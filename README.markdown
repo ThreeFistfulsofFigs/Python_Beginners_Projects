@@ -258,6 +258,21 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `pomodoro_timer_kivy`
 - **Dependencies**: `kivy>=2.0.0`
 
+### 24. Password Manager Pro
+- **Purpose**: A secure password management application with a modern Tkinter GUI, featuring AES-256 encryption for storing and managing passwords.
+- **Features**:
+  - Secure storage with AES-256 encryption using Fernet and PBKDF2 key derivation.
+  - Master password authentication with up to 3 attempts, verified by decrypting a test string.
+  - Add, view, edit, delete, and search passwords with a tabbed interface.
+  - Generate strong passwords with customizable length and character types.
+  - Import/export passwords as JSON (exported passwords are decrypted).
+  - Theme switching (superhero, darkly, cyborg, vapor) and context menus for usability.
+  - Local storage in `passwords.json` and `config.json`.
+- **Tech**: Python, `tkinter`, `ttkbootstrap`, `cryptography`, `json`, `os`, `datetime`, `secrets`, `base64`.
+- **How to Use**: Run `main.py`, set a master password on first run or enter it on subsequent runs, use the GUI to add/view/edit/delete passwords, generate new passwords, or import/export data.
+- **Directory**: `password_manager`
+- **Dependencies**: `ttkbootstrap>=1.10.1`, `cryptography>=36.0.0`
+
 ## Getting Started
 
 ### Prerequisites
