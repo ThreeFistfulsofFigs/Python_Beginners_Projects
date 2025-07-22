@@ -1,7 +1,7 @@
 # Python Beginners Projects
 
 ## Overview
-This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, a random turtle walk visualization, a colorful spirograph generator, a modern art painting generator, a classic Snake game, a classic Pong game, a Pomodoro timer (with Tkinter and Kivy versions), and a miles to kilometers converter.
+This repository contains a collection of small, standalone Python projects designed for beginners to explore practical programming concepts. Each project solves everyday problems or demonstrates specific Python techniques, making it ideal for learning and experimentation. Projects include tools for currency conversion, expense splitting, financial planning, text editing, password generation, website monitoring, text analysis, word frequency analysis, VPN kill switch configuration, Morse code conversion, a simple chatbot, a Markdown to PDF converter, a Blackjack game, a true/false quiz game, a random turtle walk visualization, a colorful spirograph generator, a modern art painting generator, a classic Snake game, a classic Pong game, a Pomodoro timer (with Tkinter and Kivy versions), a miles to kilometers converter, and a Grok Image Generator.
 
 ## Projects
 
@@ -258,7 +258,24 @@ This repository contains a collection of small, standalone Python projects desig
 - **Directory**: `pomodoro_timer_kivy`
 - **Dependencies**: `kivy>=2.0.0`
 
-### 24. Password Manager Pro
+### 24. Grok Image Generator
+- **Purpose**: A GUI application to generate and display images using the Grok API from xAI, ideal for exploring AI-generated imagery.
+- **Features**:
+  - Prompt-based image generation with quick prompts.
+  - Support for input images and real-time display in a scrollable gallery.
+  - Progress tracking and status logging.
+  - Threaded API calls for responsiveness.
+- **Tech**: Python, `tkinter`, `Pillow`, `grok3api`, with a custom `imghdr.py` for Python 3.13 compatibility.
+- **How to Use**: Run `main.py`, enter a prompt or use a quick prompt, optionally select an input image (PNG, JPG, JPEG, GIF, BMP, TIFF), click "🚀 Generate Image" to create images, and view results in the gallery.
+- **Directory**: `grok_image_generator`
+- **Dependencies**: `Pillow>=8.0.0`, `grok3api`
+- **Troubleshooting**:
+  - **GUI Not Displaying**: Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
+  - **No Images Generated**: Check status logs for "📝 No images were generated" or "📄 Raw response"; verify Grok API credentials and account quotas.
+  - **Module Not Found**: Install dependencies (`pip install Pillow grok3api`).
+  - **Image Save Errors**: Ensure write permissions in the directory.
+
+### 25. Password Manager Pro
 - **Purpose**: A secure password management application with a modern Tkinter GUI, featuring AES-256 encryption for storing and managing passwords.
 - **Features**:
   - Secure storage with AES-256 encryption using Fernet and PBKDF2 key derivation.
@@ -299,6 +316,7 @@ This repository contains a collection of small, standalone Python projects desig
   - Pong Game: None (standard library, requires `tkinter` for `turtle`)
   - Pomodoro Timer (Tkinter Version): None (standard library, requires `tkinter`)
   - Pomodoro Timer (Kivy Version): `kivy>=2.0.0`
+  - Grok Image Generator: `Pillow>=8.0.0`, `grok3api`
 
 ### Installation
 1. **Clone the Repository**:
@@ -341,6 +359,10 @@ This repository contains a collection of small, standalone Python projects desig
      ```bash
      pip install Pillow
      ```
+   - For Grok Image Generator:
+     ```bash
+     pip install Pillow grok3api
+     ```
    - For Snake Game:
      - Install `tkinter` on Linux if needed:
        ```bash
@@ -368,7 +390,7 @@ This repository contains a collection of small, standalone Python projects desig
    - Word Frequency Analyzer, Text Analyzer, Morse Code Converter, ChatBot, Quiz Game, Random Turtle Walk, and Colorful Spirograph require no additional packages.
 
 ### Exploring Projects
-1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`, `cd colorful_spirograph`, `cd modern_art_painting_generator`, `cd snake_game`, `cd pong_game`, `cd pomodoro_timer`, `cd pomodoro_timer_kivy`).
+1. Navigate to a project folder (e.g., `cd chatbot`, `cd md_to_pdf_converter`, `cd blackjack`, `cd quiz_game`, `cd random_turtle_walk`, `cd colorful_spirograph`, `cd modern_art_painting_generator`, `cd snake_game`, `cd pong_game`, `cd pomodoro_timer`, `cd pomodoro_timer_kivy`, `cd grok_image_generator`).
 2. Read the project-specific `README.md` for detailed setup and usage instructions.
 3. Run the project’s `main.py`:
    ```bash
@@ -474,6 +496,11 @@ Contributions are welcome! To contribute:
     ```bash
     sudo apt-get install python3-dev libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
     ```
+- **Grok Image Generator**:
+  - **GUI Not Displaying**: Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
+  - **No Images Generated**: Check status logs for "📝 No images were generated" or "📄 Raw response"; verify Grok API credentials and account quotas.
+  - **Module Not Found**: Install dependencies (`pip install Pillow grok3api`).
+  - **Image Save Errors**: Ensure write permissions in the directory.
 
 ## Notes
 - **Version**: 1.0.0
@@ -495,6 +522,7 @@ Contributions are welcome! To contribute:
   - **Pong Game**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Pomodoro Timer (Tkinter Version)**: Can be converted to an executable using PyInstaller (see project-specific README).
   - **Pomodoro Timer (Kivy Version)**: Can be converted to an executable using PyInstaller (see project-specific README).
+  - **Grok Image Generator**: Can be converted to an executable using PyInstaller (see project-specific README).
 
 ## Contact
 For questions or suggestions, open an issue on the [GitHub repository](https://github.com/ThreeFistfulsofFigs/Python_Beginners_Projects) or contact via email: [gerrit.meurer952@dontsp.am](mailto:gerrit.meurer952@dontsp.am).
