@@ -9,12 +9,12 @@
 # ║  Author: [Your Name]                                                     ║
 # ║  Creation Date: July 22, 2025                                            ║
 # ║  Last Modified: July 22, 2025                                            ║
-# ║  Notes: Requires grok3api and Pillow; uses custom imghdr.py               ║
+# ║  Notes: Requires grok3api, Pillow, and ttkbootstrap; uses custom imghdr.py║
 # ║         Future: Add export options or enhance UI responsiveness          ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
 
 ## Overview
-The **Grok Image Generator** is a Python-based GUI application that allows users to create images using the Grok API from xAI. Users can input custom prompts or use predefined quick prompts, optionally upload an input image, and view generated images in a scrollable gallery. The app includes real-time status updates and error handling, making it a practical tool for exploring AI-generated imagery.
+The **Grok Image Generator** is a Python-based GUI application that allows users to create images using the Grok API from xAI. Users can input custom prompts or use predefined quick prompts, optionally upload an input image, and view generated images in a scrollable gallery. The app includes real-time status updates and error handling, with a modern interface powered by `ttkbootstrap`.
 
 ## Features
 - **Prompt-Based Generation**: Enter custom prompts or select from quick prompts like "Create an image of a majestic sailing ship on stormy seas."
@@ -22,7 +22,7 @@ The **Grok Image Generator** is a Python-based GUI application that allows users
 - **Real-Time Display**: Generated images are displayed in a scrollable gallery within the GUI.
 - **Progress Tracking**: A progress bar and detailed logs show the generation process.
 - **Threaded Execution**: API calls run in a separate thread to keep the UI responsive.
-- **Custom Compatibility**: Includes a custom `imghdr.py` for Python 3.13 compatibility.
+- **Modern Styling**: Uses `ttkbootstrap` for a professional look with customizable themes (default: "superhero").
 
 ## Getting Started
 
@@ -33,7 +33,8 @@ The **Grok Image Generator** is a Python-based GUI application that allows users
   ```
 - **Dependencies**:
   - `Pillow>=8.0.0` for image processing.
-  - `grok3api` for API integration (install via `pip install grok3api`).
+  - `grok3api` for API integration.
+  - `ttkbootstrap>=1.10.1` for modern GUI styling.
 
 ### Installation
 1. **Clone the Repository** (if not already part of the project):
@@ -49,7 +50,7 @@ The **Grok Image Generator** is a Python-based GUI application that allows users
    ```
 3. **Install Dependencies**:
    ```bash
-   pip install Pillow grok3api
+   pip install Pillow grok3api ttkbootstrap
    ```
 4. **Place Files**:
    - Ensure `imghdr.py` and `main.py` are in the `grok_image_generator` directory.
@@ -73,17 +74,17 @@ The **Grok Image Generator** is a Python-based GUI application that allows users
   - Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
   - Verify Python is configured for graphical applications (e.g., a display server is running).
 - **Module Not Found**:
-  - Install missing dependencies (`pip install Pillow grok3api`).
+  - Install missing dependencies (`pip install Pillow grok3api ttkbootstrap`).
   - Ensure the virtual environment is activated.
 - **No Images Generated**:
-  - Check the status text for "📝 No images were generated in the response" or "📄 Raw response: {...}".
-  - Verify your Grok API credentials and account type (free or SuperGrok) for usage quotas.
+  - Check the status text for "📝 No images were generated" or "📄 Raw response"; verify Grok API credentials and account quotas.
   - Share the "📄 Raw response" log for further analysis.
 - **Image Save Errors**:
   - Ensure write permissions in the project directory.
   - Check for "⚠️ Image object found but no save method available" in logs.
-- **Slow Performance**:
-  - API response times depend on your internet connection and Grok server load.
+- **Styling Issues**:
+  - Ensure `ttkbootstrap` is installed and compatible (`pip install ttkbootstrap>=1.10.1`).
+  - Try a different theme by changing `themename="superhero"` to another (e.g., "darkly", "cyborg") in `main.py`.
 
 ## Contributing
 Contributions are welcome! To enhance the Grok Image Generator:

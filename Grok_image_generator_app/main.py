@@ -11,9 +11,9 @@
 # ║  Notes: Requires grok3api and Pillow; uses custom imghdr.py               ║
 # ║         Future: Add export options or enhance UI responsiveness          ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
-import tkinter as tk
-from tkinter import ttk, scrolledtext, filedialog, messagebox
-from grok3api.client import GrokClient
+import ttkbootstrap as ttk
+from ttkbootstrap import Style
+from ttkbootstrap.dialogs import Messagebox
 import threading
 import time
 import os
@@ -27,11 +27,13 @@ class GrokImageGenerator:
         self.root.geometry("800x700")
         self.root.configure(bg='#2b2b2b')
 
-        # Initialize UI first
+        # Initialize UI with ttkbootstrap style
+        self.style = Style(theme='superhero')  # Using 'superhero' theme for a modern look
         self.setup_ui()
 
         # Initialize client
         try:
+            from grok3api.client import GrokClient
             self.client = GrokClient()
             self.client_status = "✅ Connected to Grok"
             self.status_label.config(text=self.client_status)
@@ -46,7 +48,7 @@ class GrokImageGenerator:
     def setup_ui(self):
         # Main frame
         main_frame = ttk.Frame(self.root, padding="10")
-        main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
+        main_frame.grid(row=0, column=0, sticky=(ttk.W, ttk.E, ttk.N, ttk.S))
 
         # Configure grid weights
         self.root.columnconfigure(0, weight=1)
@@ -63,17 +65,17 @@ class GrokImageGenerator:
         self.status_label.grid(row=1, column=0, columnspan=3, pady=(0, 10))
 
         # Prompt input
-        ttk.Label(main_frame, text="Image Prompt:").grid(row=2, column=0, sticky=tk.W, pady=5)
+        ttk.Label(main_frame, text="Image Prompt:").grid(row=2, column=0, sticky=ttk.W, pady=5)
 
-        self.prompt_var = tk.StringVar()
+        self.prompt_var = ttk.StringVar()
         self.prompt_entry = ttk.Entry(main_frame, textvariable=self.prompt_var, width=50)
-        self.prompt_entry.grid(row=2, column=1, sticky=(tk.W, tk.E), pady=5, padx=(5, 0))
+        self.prompt_entry.grid(row=2, column=1, sticky=(ttk.W, ttk.E), pady=5, padx=(5, 0))
 
         # Quick prompts
         quick_frame = ttk.Frame(main_frame)
-        quick_frame.grid(row=3, column=0, columnspan=3, pady=5, sticky=(tk.W, tk.E))
+        quick_frame.grid(row=3, column=0, columnspan=3, pady=5, sticky=(ttk.W, ttk.E))
 
-        ttk.Label(quick_frame, text="Quick prompts:").pack(anchor=tk.W)
+        ttk.Label(quick_frame, text="Quick prompts:").pack(anchor=ttk.W)
 
         quick_prompts = [
             "Create an image of a majestic sailing ship on stormy seas",
@@ -84,44 +86,44 @@ class GrokImageGenerator:
         ]
 
         for i, prompt in enumerate(quick_prompts):
-            btn = ttk.Button(quick_frame, text=prompt,  # Display full prompt
+            btn = ttk.Button(quick_frame, text=prompt,
                              command=lambda p=prompt: self.set_prompt(p))
-            btn.pack(side=tk.LEFT, padx=2, pady=2)
+            btn.pack(side=ttk.LEFT, padx=2, pady=2)
             if i == 2:  # Line break after 3 buttons
                 ttk.Frame(quick_frame).pack()
 
         # Optional input image
-        ttk.Label(main_frame, text="Input Image (optional):").grid(row=4, column=0, sticky=tk.W, pady=5)
+        ttk.Label(main_frame, text="Input Image (optional):").grid(row=4, column=0, sticky=ttk.W, pady=5)
 
         image_frame = ttk.Frame(main_frame)
-        image_frame.grid(row=4, column=1, sticky=(tk.W, tk.E), pady=5, padx=(5, 0))
+        image_frame.grid(row=4, column=1, sticky=(ttk.W, ttk.E), pady=5, padx=(5, 0))
 
-        self.image_path_var = tk.StringVar()
+        self.image_path_var = ttk.StringVar()
         self.image_path_entry = ttk.Entry(image_frame, textvariable=self.image_path_var, width=40)
-        self.image_path_entry.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        self.image_path_entry.pack(side=ttk.LEFT, fill=ttk.X, expand=True)
 
         browse_btn = ttk.Button(image_frame, text="Browse", command=self.browse_image)
-        browse_btn.pack(side=tk.RIGHT, padx=(5, 0))
+        browse_btn.pack(side=ttk.RIGHT, padx=(5, 0))
 
         # Generate button
         self.generate_btn = ttk.Button(main_frame, text="🚀 Generate Image",
-                                       command=self.generate_image, style='Accent.TButton')
+                                       command=self.generate_image, style='success.TButton')
         self.generate_btn.grid(row=5, column=0, columnspan=3, pady=20)
 
         # Progress bar
         self.progress = ttk.Progressbar(main_frame, mode='indeterminate')
-        self.progress.grid(row=6, column=0, columnspan=3, sticky=(tk.W, tk.E), pady=5)
+        self.progress.grid(row=6, column=0, columnspan=3, sticky=(ttk.W, ttk.E), pady=5)
 
         # Status text
-        self.status_text = scrolledtext.ScrolledText(main_frame, height=8, width=70)
-        self.status_text.grid(row=7, column=0, columnspan=3, pady=10, sticky=(tk.W, tk.E))
+        self.status_text = ttk.ScrolledText(main_frame, height=8, width=70)
+        self.status_text.grid(row=7, column=0, columnspan=3, pady=10, sticky=(ttk.W, ttk.E))
 
         # Generated images frame
         self.images_frame = ttk.LabelFrame(main_frame, text="Generated Images", padding="10")
-        self.images_frame.grid(row=8, column=0, columnspan=3, pady=10, sticky=(tk.W, tk.E))
+        self.images_frame.grid(row=8, column=0, columnspan=3, pady=10, sticky=(ttk.W, ttk.E))
 
         # Configure scrollable frame for images
-        self.images_canvas = tk.Canvas(self.images_frame, height=200)
+        self.images_canvas = ttk.Canvas(self.images_frame, height=200)
         self.images_scrollbar = ttk.Scrollbar(self.images_frame, orient="horizontal", command=self.images_canvas.xview)
         self.images_canvas.configure(xscrollcommand=self.images_scrollbar.set)
 
@@ -138,7 +140,7 @@ class GrokImageGenerator:
         self.prompt_var.set(prompt)
 
     def browse_image(self):
-        filename = filedialog.askopenfilename(
+        filename = ttk.filedialog.askopenfilename(
             title="Select Input Image",
             filetypes=[
                 ("Image files", "*.png *.jpg *.jpeg *.gif *.bmp *.tiff"),
@@ -150,18 +152,18 @@ class GrokImageGenerator:
 
     def log_message(self, message):
         """Add message to status text"""
-        self.status_text.insert(tk.END, f"{time.strftime('%H:%M:%S')} - {message}\n")
-        self.status_text.see(tk.END)
+        self.status_text.insert(ttk.END, f"{time.strftime('%H:%M:%S')} - {message}\n")
+        self.status_text.see(ttk.END)
         self.root.update_idletasks()
 
     def generate_image(self):
         if not self.client:
-            messagebox.showerror("Error", "Grok client not connected!")
+            Messagebox.show_error("Error", "Grok client not connected!")
             return
 
         prompt = self.prompt_var.get().strip()
         if not prompt:
-            messagebox.showwarning("Warning", "Please enter an image prompt!")
+            Messagebox.show_warning("Warning", "Please enter an image prompt!")
             return
 
         # Disable button and start progress
@@ -257,7 +259,7 @@ class GrokImageGenerator:
             photo = ImageTk.PhotoImage(img)
 
             img_frame = ttk.Frame(self.images_inner_frame)
-            img_frame.pack(side=tk.LEFT, padx=5, pady=5)
+            img_frame.pack(side=ttk.LEFT, padx=5, pady=5)
 
             img_label = ttk.Label(img_frame, image=photo)
             img_label.image = photo
@@ -286,14 +288,7 @@ class GrokImageGenerator:
         self.log_message("✅ Generation complete!\n" + "─" * 50)
 
 def main():
-    root = tk.Tk()
-
-    style = ttk.Style()
-    try:
-        style.theme_use('clam')
-    except:
-        pass
-
+    root = ttk.Window(themename="superhero")
     app = GrokImageGenerator(root)
     root.mainloop()
 

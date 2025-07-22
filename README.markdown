@@ -265,15 +265,17 @@ This repository contains a collection of small, standalone Python projects desig
   - Support for input images and real-time display in a scrollable gallery.
   - Progress tracking and status logging.
   - Threaded API calls for responsiveness.
-- **Tech**: Python, `tkinter`, `Pillow`, `grok3api`, with a custom `imghdr.py` for Python 3.13 compatibility.
+  - Modern styling with `ttkbootstrap` themes (default: "superhero").
+- **Tech**: Python, `tkinter`, `ttkbootstrap`, `Pillow`, `grok3api`, with a custom `imghdr.py` for Python 3.13 compatibility.
 - **How to Use**: Run `main.py`, enter a prompt or use a quick prompt, optionally select an input image (PNG, JPG, JPEG, GIF, BMP, TIFF), click "🚀 Generate Image" to create images, and view results in the gallery.
 - **Directory**: `grok_image_generator`
-- **Dependencies**: `Pillow>=8.0.0`, `grok3api`
+- **Dependencies**: `Pillow>=8.0.0`, `grok3api`, `ttkbootstrap>=1.10.1`
 - **Troubleshooting**:
   - **GUI Not Displaying**: Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
   - **No Images Generated**: Check status logs for "📝 No images were generated" or "📄 Raw response"; verify Grok API credentials and account quotas.
-  - **Module Not Found**: Install dependencies (`pip install Pillow grok3api`).
+  - **Module Not Found**: Install dependencies (`pip install Pillow grok3api ttkbootstrap`).
   - **Image Save Errors**: Ensure write permissions in the directory.
+  - **Styling Issues**: Ensure `ttkbootstrap` is installed (`pip install ttkbootstrap>=1.10.1`) and try a different theme by modifying `themename` in `main.py` (e.g., "darkly", "cyborg").
 
 ### 25. Password Manager Pro
 - **Purpose**: A secure password management application with a modern Tkinter GUI, featuring AES-256 encryption for storing and managing passwords.
@@ -316,7 +318,7 @@ This repository contains a collection of small, standalone Python projects desig
   - Pong Game: None (standard library, requires `tkinter` for `turtle`)
   - Pomodoro Timer (Tkinter Version): None (standard library, requires `tkinter`)
   - Pomodoro Timer (Kivy Version): `kivy>=2.0.0`
-  - Grok Image Generator: `Pillow>=8.0.0`, `grok3api`
+  - Grok Image Generator: `Pillow>=8.0.0`, `grok3api`, `ttkbootstrap>=1.10.1`
 
 ### Installation
 1. **Clone the Repository**:
@@ -361,7 +363,7 @@ This repository contains a collection of small, standalone Python projects desig
      ```
    - For Grok Image Generator:
      ```bash
-     pip install Pillow grok3api
+     pip install Pillow grok3api ttkbootstrap
      ```
    - For Snake Game:
      - Install `tkinter` on Linux if needed:
@@ -499,8 +501,9 @@ Contributions are welcome! To contribute:
 - **Grok Image Generator**:
   - **GUI Not Displaying**: Ensure `tkinter` is installed (`sudo apt-get install python3-tk` on Linux).
   - **No Images Generated**: Check status logs for "📝 No images were generated" or "📄 Raw response"; verify Grok API credentials and account quotas.
-  - **Module Not Found**: Install dependencies (`pip install Pillow grok3api`).
+  - **Module Not Found**: Install dependencies (`pip install Pillow grok3api ttkbootstrap`).
   - **Image Save Errors**: Ensure write permissions in the directory.
+  - **Styling Issues**: Ensure `ttkbootstrap` is installed (`pip install ttkbootstrap>=1.10.1`) and try a different theme by modifying `themename` in `main.py` (e.g., "darkly", "cyborg").
 
 ## Notes
 - **Version**: 1.0.0
