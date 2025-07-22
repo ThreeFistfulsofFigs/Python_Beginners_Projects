@@ -4,7 +4,6 @@
 # ║  Features:                                                                ║
 # ║  - Detects JPEG, PNG, GIF, WEBP, BMP, ICO, and TIFF formats              ║
 # ║  - Supports file paths and file-like objects with 32-byte header check    ║
-# ║  Author: [Your Name]                                                     ║
 # ║  Creation Date: July 22, 2025                                            ║
 # ║  Last Modified: July 22, 2025                                            ║
 # ║  Notes: Place this file in the same directory as main.py                 ║

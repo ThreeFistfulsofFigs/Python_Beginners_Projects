@@ -6,7 +6,6 @@
 # ║  - Support for input images and real-time display                         ║
 # ║  - Progress tracking and status logging                                   ║
 # ║  - Threaded API calls for responsiveness                                  ║
-# ║  Author: [Your Name]                                                     ║
 # ║  Creation Date: July 22, 2025                                            ║
 # ║  Last Modified: July 22, 2025                                            ║
 # ║  Notes: Requires grok3api and Pillow; uses custom imghdr.py               ║
