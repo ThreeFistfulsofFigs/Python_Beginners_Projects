@@ -11,6 +11,8 @@
 # ║  Notes: Requires grok3api and Pillow; uses custom imghdr.py               ║
 # ║         Future: Add export options or enhance UI responsiveness          ║
 # ╚════════════════════════════════════════════════════════════════════════════╝
+from tkinter import filedialog
+
 import ttkbootstrap as ttk
 from ttkbootstrap import Style
 from ttkbootstrap.dialogs import Messagebox
@@ -140,7 +142,7 @@ class GrokImageGenerator:
         self.prompt_var.set(prompt)
 
     def browse_image(self):
-        filename = ttk.filedialog.askopenfilename(
+        filename = filedialog.askopenfilename(
             title="Select Input Image",
             filetypes=[
                 ("Image files", "*.png *.jpg *.jpeg *.gif *.bmp *.tiff"),
