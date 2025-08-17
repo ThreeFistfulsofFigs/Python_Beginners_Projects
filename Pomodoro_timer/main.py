@@ -8,15 +8,15 @@
 # Version: 1.0.0
 # Dependencies: tkinter (standard library), winsound (Windows only)
 # Last Modified: July 18, 2025
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
 
-import tkinter as tk
-import math
 import json
+import math
 import os
-from datetime import datetime, date
-import random
 import platform
+import random
+import tkinter as tk
+from datetime import datetime, date
 
 # Conditional import for sound based on platform
 if platform.system() == "Windows":
